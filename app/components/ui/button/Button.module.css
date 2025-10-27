@@ -1,0 +1,60 @@
+:root {
+  --accent1: #6ec1e4;
+  --accent2: #a17fe0;
+  --text: #dfe8ff;
+  --bg: #0a0f1c;
+}
+
+.btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px; 
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden; 
+  background-clip: padding-box;
+
+  transition:
+    background-color 400ms ease-in-out,
+    background-image 400ms ease-in-out,
+    color 400ms ease-in-out,
+    border-color 400ms ease-in-out,
+    box-shadow 400ms ease-in-out;
+}
+
+.primary {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, var(--accent2), var(--accent1));
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  box-shadow: 0 10px 30px rgba(161,127,224,0.12);
+  border-color: transparent;
+}
+
+.primary:hover {
+  background-image: none;
+  background-color: transparent;
+  border-color: var(--accent1);
+  color: var(--accent1);
+  box-shadow: 0 6px 20px rgba(161,127,224,0.08);
+}
+
+.secondary {
+  background-color: transparent;
+  border-color: var(--accent1);
+  color: var(--accent1);
+}
+
+.secondary:hover {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, var(--accent2), var(--accent1));
+  color: white;
+  box-shadow: 0 10px 30px rgba(161,127,224,0.12);
+}

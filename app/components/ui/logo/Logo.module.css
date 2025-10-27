@@ -1,4 +1,10 @@
 .logo {
-  height: 40px;
-  width: auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #a17fe0, #6ec1e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+  display: inline-block;
 }

@@ -1,10 +1,15 @@
-import Link from "next/link";
-import styles from "./Logo.module.css";
+import styles from '@/app/components/ui/logo/Logo.module.css';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: '600',
+});
 
 export default function Logo() {
   return (
-    <Link href="/" className={styles.logo}>
-      MyBrand
-    </Link>
+    <span className={`${styles.logo} ${poppins.className}`}>
+      EG
+    </span>
   );
 }

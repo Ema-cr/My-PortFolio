@@ -1,0 +1,39 @@
+.langSwitch { display:inline-block; width:56px; height:28px; position:relative; }
+.langSwitch input { display:none; }
+
+.track {
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, var(--glass), transparent);
+  border-radius:999px;
+  border:1px solid rgba(110,193,228,0.06);
+  transition: background 160ms ease;
+  display:flex;
+  align-items:center;
+  padding:4px;
+  box-sizing:border-box;
+}
+
+.knob {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background: var(--background); 
+  color: var(--foreground);      
+  font-size:10px;
+  font-weight:700;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+  transform: translateX(0);
+}
+
+.langSwitch input:checked + .track {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+}
+
+.langSwitch input:checked + .track .knob {
+  transform: translateX(28px);
+  background: var(--background);
+  color: var(--foreground);
+}

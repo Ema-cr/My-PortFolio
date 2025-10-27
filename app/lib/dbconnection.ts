@@ -7,7 +7,7 @@ if (!MONGODB_URI) {
 }
 
 export default async function dbConnect(): Promise<void> {
-  if (mongoose.connection.readyState >= 1) return; 
+  if (mongoose.connection.readyState >= 1) return;
 
   try {
     await mongoose.connect(MONGODB_URI);

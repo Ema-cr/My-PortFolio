@@ -1,25 +1,25 @@
-import es from '@/app/i18n/locales/es.json';
-import en from '@/app/i18n/locales/en.json';
+'use client';
 
-export type Locale = 'es' | 'en' ;
+import React from 'react';
+import styles from './LanguageSwitcher.module.css';
+import { useI18n } from '@/app/context/I18nContext';
 
-export const locales: Locale[] = ['es', 'en'];
+export default function LanguageSwitcher() {
+  const { locale, setLocale } = useI18n();
 
-export const defaultLocale: Locale = 'es';
+  const toggle = () => setLocale(locale === 'es' ? 'en' : 'es');
 
-export const dictionaries = {
-  es,
-  en,
-};
-
-export const getDictionary = (locale: Locale) => {
-  return dictionaries[locale] || dictionaries[defaultLocale];
-};
-
-export const getLocaleDisplayName = (locale: Locale): string => {
-  const names: Record<Locale, string> = {
-    es: 'Español',
-    en: 'English',
-  };
-  return names[locale];
-};
+  return (
+    <label className={styles.langSwitch}>
+      <input
+        aria-label="Toggle language"
+        type="checkbox"
+        checked={locale === 'en'}
+        onChange={toggle}
+      />
+      <span className={styles.track}>
+        <span className={styles.knob}>{locale.toUpperCase()}</span>
+      </span>
+    </label>
+  );
+}

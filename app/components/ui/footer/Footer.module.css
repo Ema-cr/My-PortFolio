@@ -1,0 +1,111 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(180deg, transparent, var(--glass));
+  border-top: 1px solid var(--glass);
+  padding: 3rem 0;
+  margin-top: auto; 
+}
+
+.container {
+  width: 100%;
+  max-width: var(--nav-max-width);
+  margin: 0 auto;
+  padding: 0 var(--nav-padding-desktop);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link {
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 
+    color 200ms ease,
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: var(--accent1);
+  transform: translateY(-2px);
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.iconLink {
+  color: var(--foreground);
+  font-size: 1.5rem;
+  transition: 
+    color 200ms ease,
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background: var(--glass);
+}
+
+.iconLink:hover {
+  color: var(--accent2);
+  transform: translateY(-2px);
+}
+
+.copyright {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.riwi {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.riwiName {
+  color: var(--accent2);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 var(--nav-padding-mobile);
+  }
+  
+  .nav {
+    gap: 1.5rem;
+  }
+  
+  .social {
+    gap: 1rem;
+  }
+  
+  .link,
+  .copyright {
+    font-size: 0.9rem;
+  }
+  
+  .iconLink {
+    font-size: 1.25rem;
+    padding: 0.4rem;
+  }
+}
